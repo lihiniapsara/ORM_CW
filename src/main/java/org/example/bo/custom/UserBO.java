@@ -1,15 +1,11 @@
-package lk.ijse.bo.custom;
+package org.example.bo.custom;
 
-import lk.ijse.bo.SuperBO;
-import lk.ijse.dto.UserDTO;
-import lk.ijse.entity.User;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
-public interface UserBO extends SuperBO {
-    public String getCurrentId() throws SQLException, ClassNotFoundException ;
+public interface UserBO {
+    /*public String getCurrentId() throws SQLException, ClassNotFoundException ;
 
     public ArrayList<UserDTO> getAll() throws SQLException, ClassNotFoundException ;
 
@@ -21,5 +17,5 @@ public interface UserBO extends SuperBO {
 
     public boolean delete(String id) throws SQLException, ClassNotFoundException ;
 
-    boolean checkCredentials(String id, String pw) throws SQLException, ClassNotFoundException;
+    boolean checkCredentials(String id, String pw) throws SQLException, ClassNotFoundException;*/
 }

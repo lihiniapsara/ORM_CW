@@ -1,2 +1,4 @@
-package org.example.dao.custom;public interface UserDAO {
+package org.example.dao.custom;
+
+public interface UserDAO {
 }

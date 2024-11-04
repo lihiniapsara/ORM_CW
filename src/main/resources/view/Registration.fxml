@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="533.0" prefWidth="722.0" styleClass="backgroundColour2" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.RegistrationFormController">
+<AnchorPane prefHeight="533.0" prefWidth="722.0" styleClass="backgroundColour2" stylesheets="@../css/Style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.RegistrationFormController">
     <children>
         <!-- Corrected Image Path for Shopping.png -->
         <Label layoutX="252.0" layoutY="22.0" prefHeight="73.0" prefWidth="347.0" text="Registration Form">
@@ -60,7 +58,7 @@
 
         <TextField fx:id="txtEmail" layoutX="328.0" layoutY="300.0" onKeyReleased="#teltextKeyReleased" prefHeight="26.0" prefWidth="241.0" promptText="Enter Email" />
 
-        <Label layoutX="176.0" layoutY="303.0" text="Email:">
+        <Label layoutX="176.0" layoutY="303.0" text="Job Role:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>

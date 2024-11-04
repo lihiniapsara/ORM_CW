@@ -1,20 +1,26 @@
-package lk.ijse.bo.custom.impl;
+package org.example.bo.custom.impl;
 
-import lk.ijse.bo.custom.UserBO;
-import lk.ijse.dao.custom.impl.CustomerDAOImpl;
-import lk.ijse.dao.custom.impl.UserDAOImpl;
-import lk.ijse.dto.CustomerDTO;
-import lk.ijse.dto.UserDTO;
-import lk.ijse.entity.Customer;
-import lk.ijse.entity.User;
+
+import org.example.dao.custom.impl.UserDAOImpl;
+import org.example.dto.UserDTO;
+import org.example.entity.User;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class UserBOImpl implements UserBO {
+public class UserBOImpl {
     UserDAOImpl userDAO = new UserDAOImpl();
+    public ArrayList<UserDTO> getAll() {
+        ArrayList<UserDTO> allUsers= new ArrayList<>();
+        List<User> all = userDAO.getAll();
+        for(User u:all){
+            allUsers.add(new UserDTO(u.getU_id(),u.getU_name(),u.getPw(),u.getJob_role(),u.getTel()));
+        }
+        return allUsers;
+    }
+ /*   UserDAOImpl userDAO = new UserDAOImpl();
 
     public String getCurrentId() throws SQLException, ClassNotFoundException {
         return userDAO.currentId();
@@ -53,5 +59,5 @@ public class UserBOImpl implements UserBO {
             return pw.equals(userPw);
         }
         return false;
-    }
+    }*/
 }
