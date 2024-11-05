@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserTm {
 
-    private String u_id;
+    private long u_id;
     private String u_name;
     private String pw;
     private String job_role;

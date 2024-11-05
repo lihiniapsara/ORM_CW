@@ -126,6 +126,6 @@
                 <Image url="@../icon/student.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="txtid" layoutX="261.0" layoutY="60.0" onKeyReleased="#idtextKeyReleased" prefHeight="26.0" prefWidth="186.0" text="Label" />
+        <Label fx:id="lblStudentId" layoutX="261.0" layoutY="60.0" onKeyReleased="#idtextKeyReleased" prefHeight="26.0" prefWidth="186.0" text="Student ID" />
     </children>
 </AnchorPane>

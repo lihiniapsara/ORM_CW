@@ -1,20 +1,26 @@
 package org.example.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "user")
 public class User {
     @Id
-    private String u_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long u_id;
+    @Column(name = "u_name")
     private String u_name;
+    @Column(name = "pw")
     private String pw;
+    @Column(name = "job_role")
     private String job_role;
+    @Column(name = "tel")
     private String tel;
 
     public User() {
     }
-    public User(String u_id, String u_name, String pw, String job_role, String tel) {
+
+    public User(long u_id, String u_name, String pw, String job_role, String tel) {
         this.u_id = u_id;
         this.u_name = u_name;
         this.pw = pw;
@@ -22,11 +28,11 @@ public class User {
         this.tel = tel;
     }
 
-    public String getU_id() {
+    public long getU_id() {
         return u_id;
     }
 
-    public void setU_id(String u_id) {
+    public void setU_id(long u_id) {
         this.u_id = u_id;
     }
 

@@ -20,6 +20,15 @@ public class UserBOImpl {
         }
         return allUsers;
     }
+
+    public boolean save(UserDTO userDTO) {
+        System.out.println("hello");
+        return userDAO.save(new User(userDTO.getU_id(),userDTO.getU_name(),userDTO.getPw(),userDTO.getJob_role(),userDTO.getTel()));
+    }
+
+   /* public String getCurrentId() {
+        return userDAO.currentId();
+    }*/
  /*   UserDAOImpl userDAO = new UserDAOImpl();
 
     public String getCurrentId() throws SQLException, ClassNotFoundException {
