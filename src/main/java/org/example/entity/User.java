@@ -23,8 +23,6 @@ public class User {
     private List<Student> studentList;
 
 
-
-
     public User() {
     }
 
@@ -37,6 +35,10 @@ public class User {
     }
 
     public User(String uName, String pw, String jobRole, String tel) {
+        this.u_name = uName;
+        this.pw = pw;
+        this.job_role = jobRole;
+        this.tel = tel;
     }
 
     public long getU_id() {

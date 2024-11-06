@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.BOFactory;
@@ -179,5 +180,22 @@ public class UserController {
     }
 
     public void idtextKeyReleased(KeyEvent keyEvent) {
+    }
+
+    public void userupdate(MouseEvent mouseEvent) {
+        TableView<UserTm> table = (TableView<UserTm>) mouseEvent.getSource();
+        UserTm user = table.getSelectionModel().getSelectedItem();
+        if (user != null) {
+            String u_name = user.getU_name();
+            String pw = user.getPw();
+            String job_role = user.getJob_role();
+            String tel = user.getTel();
+
+            txtName.setText(u_name);
+            txtPassword.setText(pw);
+            cmbjobrole.setValue(job_role);
+            txtContact.setText(tel);
+        }
+
     }
 }

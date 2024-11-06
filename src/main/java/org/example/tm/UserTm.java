@@ -14,4 +14,11 @@ public class UserTm {
     private String pw;
     private String job_role;
     private String tel;
+
+    public UserTm(String u_name, String pw, String job_role, String tel) {
+        this.u_name = u_name;
+        this.pw = pw;
+        this.job_role = job_role;
+        this.tel = tel;
+    }
 }
