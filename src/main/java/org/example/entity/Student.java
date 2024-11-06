@@ -18,8 +18,19 @@ public class Student {
     @Column(name = "contact")
     private   String contact;
 
+    @ManyToOne
+    private User user;
+
     public Student() {
 
+    }
+
+    public Student(String s_name, String address, String email, String contact, User user) {
+        this.s_name = s_name;
+        this.address = address;
+        this.email = email;
+        this.contact = contact;
+        this.user = user;
     }
 
     public Student(long s_id, String s_name, String address, String email, String contact) {

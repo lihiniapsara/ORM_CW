@@ -2,9 +2,12 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "user")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long u_id;
@@ -16,6 +19,11 @@ public class User {
     private String job_role;
     @Column(name = "tel")
     private String tel;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Student> studentList;
+
+
+
 
     public User() {
     }
@@ -26,6 +34,9 @@ public class User {
         this.pw = pw;
         this.job_role = job_role;
         this.tel = tel;
+    }
+
+    public User(String uName, String pw, String jobRole, String tel) {
     }
 
     public long getU_id() {

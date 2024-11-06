@@ -26,6 +26,17 @@ public class UserBOImpl {
         return userDAO.save(new User(userDTO.getU_id(),userDTO.getU_name(),userDTO.getPw(),userDTO.getJob_role(),userDTO.getTel()));
     }
 
+
+
+    public boolean delete(String tel) {
+        return userDAO.delete(tel);
+    }
+
+    public boolean update(UserDTO userDTO) {
+        return userDAO.update(new User(userDTO.getU_name(),userDTO.getPw(),userDTO.getJob_role(),userDTO.getTel()));
+
+    }
+
    /* public String getCurrentId() {
         return userDAO.currentId();
     }*/

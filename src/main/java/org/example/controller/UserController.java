@@ -78,17 +78,27 @@ public class UserController {
     public void btnSaveOnAction(ActionEvent event) {
         String u_name = txtName.getText();
         String pw = txtPassword.getText();
-        String job_role = cmbjobrole.getAccessibleRoleDescription();
+        String job_role = (String) cmbjobrole.getValue();
         String tel = txtContact.getText();
 
         boolean isSaved = userBO.save(new UserDTO(u_name, pw, job_role, tel));
         //System.out.println("fghjk");
         if (isSaved) {
             new Alert(Alert.AlertType.CONFIRMATION, "User Saved!").show();
+            loadAllUsers();
+            clearFields();
         } else {
             new Alert(Alert.AlertType.ERROR, "Try Again!").show();
         }
     }
+
+    private void clearFields() {
+        txtName.clear();
+        txtPassword.clear();
+        cmbjobrole.setValue(null);
+        txtContact.clear();
+    }
+
     private void setCellValueFactory() {
         colId.setCellValueFactory(new PropertyValueFactory<>("u_id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("u_name"));
@@ -113,17 +123,48 @@ public class UserController {
     }*/
 
     public void btnUpdateOnAction(ActionEvent event) {
+        String u_name = txtName.getText();
+        String pw = txtPassword.getText();
+        String job_role = (String) cmbjobrole.getValue();
+        String tel = txtContact.getText();
+        try {
+            boolean isUpdated = userBO.update(new UserDTO(u_name, pw, job_role, tel));
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
+                loadAllUsers();
+                clearFields();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "No record found to update!").show();
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Try Again!").show();
+            e.printStackTrace();
+        }
     }
 
+
+
     public void btnDeleteOnAction(ActionEvent event) {
+        String tel = txtContact.getText();
+        try {
+            boolean isDeleted = userBO.delete(tel);
+            if (isDeleted) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Deleted!").show();
+                loadAllUsers();
+                clearFields();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "No record found to delete!").show();
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Try Again!").show();
+            e.printStackTrace();
+        }
     }
 
     public void btnClearOnAction(ActionEvent event) {
+        clearFields();
     }
 
-    public void txtNameOnAction(ActionEvent event) {
-
-    }
     public void nametextKeyReleased(KeyEvent keyEvent) {
     }
 

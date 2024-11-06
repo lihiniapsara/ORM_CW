@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="root" prefHeight="422.0" prefWidth="570.0" style="-fx-background-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentController">
+<AnchorPane fx:id="root" prefHeight="422.0" prefWidth="570.0" style="-fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentController">
     <children>
         <Label layoutX="236.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" text="User Manage">
             <font>
@@ -35,7 +30,7 @@
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <ComboBox layoutX="263.0" layoutY="174.0" prefHeight="26.0" prefWidth="186.0" />
+        <ComboBox fx:id="cmbpaymenttype" layoutX="263.0" layoutY="174.0" prefHeight="26.0" prefWidth="186.0" />
 
         <Label layoutX="125.0" layoutY="222.0" text="  Amount:">
             <font>
@@ -121,6 +116,6 @@
             </image>
         </ImageView>
         <Label fx:id="txtpaymentid" layoutX="261.0" layoutY="83.0" onKeyReleased="#idtextKeyReleased" prefHeight="26.0" prefWidth="186.0" text="Label" />
-        <ComboBox layoutX="261.0" layoutY="129.0" prefHeight="26.0" prefWidth="186.0" />
+        <ComboBox fx:id="cmbprogramid" layoutX="261.0" layoutY="129.0" prefHeight="26.0" prefWidth="186.0" />
     </children>
 </AnchorPane>

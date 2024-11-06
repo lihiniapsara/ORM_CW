@@ -16,5 +16,9 @@ public class UserDTO {
     private String tel;
 
     public UserDTO(String u_name, String pw, String jobRole, String tel) {
+        this.u_name = u_name;
+        this.pw = pw;
+        this.job_role = jobRole;
+        this.tel = tel;
     }
 }

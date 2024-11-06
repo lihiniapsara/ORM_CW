@@ -26,6 +26,34 @@ public class UserDAOImpl {
         return true;
     }
 
+
+    public boolean delete(String tel) {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.createNativeQuery("DELETE FROM User WHERE tel = :tel").setParameter("tel", tel)
+                .executeUpdate();
+        transaction.commit();
+        session.close();
+        return true;
+    }
+
+    public boolean update(User user) {
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        session.beginTransaction();
+
+        String hql = "UPDATE User SET u_name = :name, pw = :pw, job_role = :job_role, tel = :tel WHERE tel = :tel";
+        session.createQuery(hql)
+                .setParameter("name",user.getU_name())
+                .setParameter("pw",user.getPw())
+                .setParameter("job_role",user.getJob_role())
+                .setParameter("tel",user.getTel())
+                .executeUpdate();
+        session.getTransaction().commit();
+        return true;
+
+    }
+
    /* public String currentId() {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
