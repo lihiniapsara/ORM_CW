@@ -34,7 +34,7 @@ public class UserController {
     public TableColumn<?,?> colTel;
 
     public TableColumn<?,?> colJobRole;
-    public Label txtuserid;
+
     public ComboBox cmbjobrole;
 
     UserBOImpl userBO=new UserBOImpl();
@@ -196,6 +196,5 @@ public class UserController {
             cmbjobrole.setValue(job_role);
             txtContact.setText(tel);
         }
-
     }
 }

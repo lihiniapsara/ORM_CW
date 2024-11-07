@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProgramTm {
 
-    private long program_id;
+    private String program_id;
     private String program_name;
     private String duration;
     private String fee;

@@ -121,7 +121,7 @@ public class StudentController {
         if (isSaved) {
             new Alert(Alert.AlertType.CONFIRMATION, "Saved!").show();
         }
-
+        loadAllStudents();
         clearFields();
     }
     private void setCellValueFactory() {

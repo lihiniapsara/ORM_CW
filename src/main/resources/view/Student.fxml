@@ -18,35 +18,30 @@
                 <Font name="System Bold Italic" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="136.0" layoutY="63.0" text="Student ID:">
+        <Label layoutX="142.0" layoutY="84.0" text="  Student Name:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="131.0" layoutY="104.0" text="  Student Name:">
+        <Label layoutX="141.0" layoutY="121.0" text="  Address:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="130.0" layoutY="141.0" text="  Address:">
+        <Label layoutX="148.0" layoutY="157.0" text="Email:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="137.0" layoutY="177.0" text="Email:">
+        <Label layoutX="148.0" layoutY="196.0" text="Phone NO:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="137.0" layoutY="216.0" text="Phone NO:">
-            <font>
-                <Font name="System Bold Italic" size="13.0" />
-            </font>
-        </Label>
-        <TextField fx:id="txtName" layoutX="261.0" layoutY="101.0" onKeyReleased="#nametextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Student Name" />
-        <TextField fx:id="txtAddress" layoutX="263.0" layoutY="138.0" onKeyReleased="#addressKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Student Address" />
-        <TextField fx:id="txtEmail" layoutX="263.0" layoutY="174.0" onKeyReleased="#emailtextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Student Email" />
-        <TextField fx:id="txtContact" layoutX="263.0" layoutY="213.0" onAction="#txtSearchOnAction" onKeyReleased="#teltextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Contact Number" />
+        <TextField fx:id="txtName" layoutX="272.0" layoutY="81.0" onKeyReleased="#nametextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Student Name" />
+        <TextField fx:id="txtAddress" layoutX="274.0" layoutY="118.0" onKeyReleased="#addressKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Student Address" />
+        <TextField fx:id="txtEmail" layoutX="274.0" layoutY="154.0" onKeyReleased="#emailtextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Student Email" />
+        <TextField fx:id="txtContact" layoutX="274.0" layoutY="193.0" onAction="#txtSearchOnAction" onKeyReleased="#teltextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Contact Number" />
         <TableView fx:id="tblStudent" layoutX="119.0" layoutY="258.0" prefHeight="150.0" prefWidth="438.0">
             <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="Student ID" />
@@ -126,6 +121,5 @@
                 <Image url="@../icon/student.jpg" />
             </image>
         </ImageView>
-        <Label fx:id="lblStudentId" layoutX="261.0" layoutY="60.0" onKeyReleased="#idtextKeyReleased" prefHeight="26.0" prefWidth="186.0" text="Student ID" />
     </children>
 </AnchorPane>

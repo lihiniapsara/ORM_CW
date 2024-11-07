@@ -1,16 +1,20 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "program")
 public class Program {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "program_id")
-    private long programId;
+    private String programId;
 
     @Column(name = "name")
     private String name;
@@ -19,16 +23,36 @@ public class Program {
     @Column(name = "fee")
     private String fee;
 
+    @OneToMany(mappedBy = "program")
+    private List<Payment> paymentList;
+
+    public Program(String programId, String programName, String duration, String fee) {
+
+        this.programId = programId;
+        this.name = programName;
+        this.duration = duration;
+        this.fee = fee;
+    }
+
     // One program can have many payments
 
     // Getters and Setters
 
-    public long getProgramId() {
+
+    public String getProgramId() {
         return programId;
     }
 
-    public void setProgramId(long programId) {
+    public void setProgramId(String programId) {
         this.programId = programId;
+    }
+
+    public List<Payment> getPaymentList() {
+        return paymentList;
+    }
+
+    public void setPaymentList(List<Payment> paymentList) {
+        this.paymentList = paymentList;
     }
 
     public String getName() {
