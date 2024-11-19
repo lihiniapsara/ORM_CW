@@ -1,0 +1,50 @@
+/* General styles for the AnchorPane */
+#dashboardPane {
+    -fx-background-color: #060270;
+}
+
+/* Styles for JFX buttons */
+.jfx-button {
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5 15;
+}
+
+/* Logout button specific styles */
+.btn-logout {
+    -fx-background-color: #4CFD07;
+    -fx-text-fill: black;
+}
+
+/* Register button specific styles */
+.btn-register {
+    -fx-background-color: #FFE31A;
+    -fx-text-fill: #0d0d0d;
+}
+
+/* Styles for sub-section buttons */
+.sub-button {
+    -fx-background-color: #060270;
+    -fx-text-fill: white;
+}
+
+/* Hover effect for buttons */
+.jfx-button:hover {
+    -fx-opacity: 0.8;
+    -fx-cursor: hand;
+}
+
+/* Dashboard label styles */
+.dashboard-label {
+    -fx-font-family: "System";
+    -fx-font-size: 30px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a6a0a0;
+}
+
+/* Styles for ImageView elements */
+.image-view {
+    -fx-preserve-ratio: true;
+}

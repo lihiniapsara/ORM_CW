@@ -1,4 +1,6 @@
 package org.example.controller;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import javafx.collections.FXCollections;
@@ -6,11 +8,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.bo.custom.impl.PaymentBOImpl;
 import org.example.bo.custom.impl.ProgramBOImpl;
 import org.example.tm.PaymentTm;
 
+import java.io.IOException;
 import java.util.List;
 
 public class PaymentController {
@@ -23,6 +28,8 @@ public class PaymentController {
     public Label txtpaymentid;
     public ComboBox cmbprogramid;
     public ComboBox cmbpaymenttype;
+    public TableColumn coldate;
+    public DatePicker datepicker;
 
 
     PaymentBOImpl paymentBO = new PaymentBOImpl();
@@ -116,9 +123,12 @@ public class PaymentController {
         // ...
     }
 
-    public void btnDashboardOnAction(ActionEvent event) {
-        // ...
-    }
+    public void btnDashboardOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
+        Stage stage = (Stage) root.getScene().getWindow();
+        stage.setScene(new Scene(anchorPane));
+        stage.setTitle("Dashboard Form");
+        stage.centerOnScreen();    }
 
     public void idtextKeyReleased(KeyEvent keyEvent) {
        /* String id = txtpaymentid.getText();
@@ -132,4 +142,6 @@ public class PaymentController {
     }
 
 
+    public void updatepayment(MouseEvent mouseEvent) {
+    }
 }

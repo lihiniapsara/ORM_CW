@@ -37,6 +37,23 @@ public class UserBOImpl {
 
     }
 
+    public UserDTO getatabyrole(String role) {
+        User user = userDAO.getatabyrole(role);
+        if (user == null) {
+            throw new NullPointerException("No user found for role: " + role);
+        }
+        return new UserDTO(user.getU_id(), user.getU_name(), user.getPw(), user.getJob_role(), user.getTel());
+    }
+
+    public UserDTO getdata(String name) {
+        User user = userDAO.getdata(name);
+        if (user == null) {
+            return null;
+        } else {
+            return new UserDTO(user.getU_id(), user.getU_name(), user.getPw(), user.getJob_role(), user.getTel());
+        }
+
+
    /* public String getCurrentId() {
         return userDAO.currentId();
     }*/
@@ -80,4 +97,9 @@ public class UserBOImpl {
         }
         return false;
     }*/
+    }
+
+    public boolean registeradmin(UserDTO admin) {
+        return userDAO.register(new User(admin.getU_id(),admin.getU_name(),admin.getPw(),admin.getJob_role(),admin.getTel()));
+    }
 }

@@ -10,10 +10,15 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 public class StudentDAOImpl {
-    public boolean save(Student student) {
+    public boolean save(Student student , User user) {
         System.out.println("Saving student: " + student);  // Debugging: Print student details
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
+
+        System.out.println("Associate User: " + user);
+
+        student.setUser(user);
+
         session.save(student);
         transaction.commit();
         session.close();
@@ -40,10 +45,16 @@ public class StudentDAOImpl {
 
     public boolean update(Student student) {
         Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-        session.update(student);
-        transaction.commit();
-        session.close();
+        session.beginTransaction();
+
+        String hql = "UPDATE Student SET s_name = :name,address = :address,email = :email WHERE contact = :contact";
+        session.createQuery(hql)
+                .setParameter("name",student.getS_name())
+                .setParameter("address",student.getAddress())
+                .setParameter("email",student.getEmail())
+                .setParameter("contact",student.getContact())
+                .executeUpdate();
+        session.getTransaction().commit();
         return true;
     }
 }

@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="422.0" prefWidth="570.0" style="-fx-background-radius: 30;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentController">
+<AnchorPane fx:id="root" prefHeight="422.0" prefWidth="570.0" style="-fx-background-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentController">
     <children>
-        <Label layoutX="236.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" text="User Manage">
+        <Label layoutX="236.0" layoutY="14.0" prefHeight="26.0" prefWidth="150.0" text="Payment Manage">
             <font>
                 <Font name="System Bold Italic" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="125.0" layoutY="86.0" text=" Payment ID:">
+        <Label layoutX="125.0" layoutY="99.0" text="Program ID:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <Label layoutX="126.0" layoutY="132.0" text="Program ID:">
+        <ComboBox layoutX="274.0" layoutY="137.0" prefHeight="26.0" prefWidth="186.0" />
+        <Label layoutX="119.0" layoutY="140.0" text="   Payment Type:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <ComboBox layoutX="263.0" layoutY="174.0" prefHeight="26.0" prefWidth="186.0" />
-        <Label layoutX="118.0" layoutY="177.0" text="   Payment Type:">
-            <font>
-                <Font name="System Bold Italic" size="13.0" />
-            </font>
-        </Label>
-        <ComboBox fx:id="cmbpaymenttype" layoutX="263.0" layoutY="174.0" prefHeight="26.0" prefWidth="186.0" />
 
-        <Label layoutX="125.0" layoutY="222.0" text="  Amount:">
+        <Label layoutX="125.0" layoutY="230.0" text="  Amount:">
             <font>
                 <Font name="System Bold Italic" size="13.0" />
             </font>
         </Label>
-        <TextField fx:id="txtAmount" layoutX="263.0" layoutY="219.0" onKeyReleased="#amounttextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Amount" />
-        <TableView fx:id="tblPayment" layoutX="119.0" layoutY="270.0" prefHeight="138.0" prefWidth="438.0">
+        <TextField fx:id="txtAmount" layoutX="275.0" layoutY="227.0" onKeyReleased="#amounttextKeyReleased" prefHeight="26.0" prefWidth="186.0" promptText="Enter Amount" />
+        <TableView fx:id="tblPayment" layoutX="119.0" layoutY="270.0" onMouseClicked="#updatepayment" prefHeight="138.0" prefWidth="438.0">
             <columns>
                 <TableColumn fx:id="colpaymentId" prefWidth="102.39997100830078" text="Payment ID" />
-                <TableColumn fx:id="colPaymentType" prefWidth="177.60003662109375" text="Payment Type" />
-                <TableColumn fx:id="colamount" prefWidth="155.99990844726562" text="Amount" />
+                <TableColumn fx:id="colPaymentType" prefWidth="120.0" text="Payment Type" />
+                <TableColumn fx:id="coldate" prefWidth="112.800048828125" text="Date" />
+            <TableColumn fx:id="colamount" prefWidth="103.19998168945312" text="Amount" />
             </columns>
         </TableView>
         <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="270.0" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #189AB4;" text="      Save" textFill="WHITE">
@@ -115,7 +116,12 @@
                 <Image url="@../icon/Payment-Transparent-Images.png" />
             </image>
         </ImageView>
-        <Label fx:id="txtpaymentid" layoutX="261.0" layoutY="83.0" onKeyReleased="#idtextKeyReleased" prefHeight="26.0" prefWidth="186.0" text="Label" />
-        <ComboBox fx:id="cmbprogramid" layoutX="261.0" layoutY="129.0" prefHeight="26.0" prefWidth="186.0" />
+        <ComboBox fx:id="cmbprogramid" layoutX="274.0" layoutY="96.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="139.0" layoutY="184.0" text="Date:">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datepicker" layoutX="275.0" layoutY="181.0" prefHeight="26.0" prefWidth="186.0" />
     </children>
 </AnchorPane>

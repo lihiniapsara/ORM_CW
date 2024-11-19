@@ -1,8 +1,12 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "payment")
 public class Payment {
 
@@ -14,47 +18,22 @@ public class Payment {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "date")
+    private String date;
+
     @Column(name = "amount")
     private String amount;
 
     // Many payments belong to one program
-    @ManyToOne
-    @JoinColumn(name = "program_id", nullable = false) // This column must exist in your 'payment' table
-    private Program program;
+    @OneToOne
+    @JoinColumn(name = "sp_id") // This column must exist in your 'payment' table
+    private Student_programDetail studentProgramDetail;
 
     public Payment(String id, String prgramId, String paymentType, String amount) {
     }
 
-    // Getters and Setters
-    public long getPayId() {
-        return payId;
+    public Payment() {
+
     }
 
-    public void setPayId(long payId) {
-        this.payId = payId;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public Program getProgram() {
-        return program;
-    }
-
-    public void setProgram(Program program) {
-        this.program = program;
-    }
 }

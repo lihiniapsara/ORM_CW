@@ -9,6 +9,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.example.bo.custom.UserBO;
+import org.example.bo.custom.impl.UserBOImpl;
+import org.example.dao.custom.UserDAO;
+import org.example.dao.custom.impl.UserDAOImpl;
+import org.example.dto.UserDTO;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,39 +23,45 @@ public class LoginformController {
     public TextField txtId;
     public TextField txtPw;
     public AnchorPane rootNode;
+    UserBOImpl userBO=new UserBOImpl();
+    UserDAOImpl userDAO=new UserDAOImpl();
+    static  UserDTO liveUserDto;
 
     public void idtextKeyReleased(KeyEvent keyEvent) {
     }
 
-    public void btnLoginOnAction(ActionEvent event) {
-       /* String id = txtId.getText();
+    public void btnLoginOnAction(ActionEvent event) throws IOException {
+        String name = txtId.getText();
         String pw = txtPw.getText();
 
-        try {
-            checkCredential(id, pw);
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
-        }*/
-    }
-
-    private void checkCredential(String id, String pw) throws SQLException, IOException {
-       /* try {
-            boolean isValidUser = userBO.checkCredentials(id, pw);
-            if (isValidUser) {
-                System.out.println("User name and password correct >>>>>");
-                navigateDashboard();
+        if (name.isEmpty() || pw.isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Please enter both ID and Password!").show();
+        } else {
+            UserDTO userDTO = userBO.getdata(name);
+            if (userDTO == null) {
+                new Alert(Alert.AlertType.ERROR, "User not found!").show();
             } else {
-                new Alert(Alert.AlertType.ERROR, "Sorry! Password is incorrect!").show();
+                if (BCrypt.checkpw(pw, userDTO.getPw())) {
+                    if (userDTO.getJob_role().equals("Admin")) {
+                        System.out.println("Admin");
+                        liveUserDto=userDTO;
+
+
+                    }else {
+                        liveUserDto=userDTO;
+                        System.out.println("User");
+                    }
+                    navigateDashboard();
+                }else {
+                    new Alert(Alert.AlertType.ERROR, "Password is incorrect!").show();
+                }
             }
-        } catch (SQLException | IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "An error occurred while checking credentials!").show();
-        }*/
-
+        }
     }
-    private void navigateDashboard() throws IOException {
-        AnchorPane root = FXMLLoader.load(getClass().getResource("/resources/view/DashBoard_form.fxml"));
 
+    private void navigateDashboard() throws IOException {
+
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
         Scene scene = new Scene(root);
 
         Stage stage = (Stage) rootNode.getScene().getWindow();
@@ -57,20 +69,25 @@ public class LoginformController {
         stage.centerOnScreen();
         stage.setTitle("Dashboard Form");
 
-
     }
 
     public void linkRegistrationOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/Registration.fxml"));
+        if (userDAO.ifhaveadmin()) {
+            new Alert(Alert.AlertType.ERROR, "Admin already exists!").show();
+        }else {
+            AnchorPane root = FXMLLoader.load(getClass().getResource("/view/reg.fxml"));
 
+            Scene scene = new Scene(root);
 
+            Stage stage = (Stage) rootNode.getScene().getWindow();
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setTitle("Registration Form");
+        }
 
-        Scene scene = new Scene(rootNode);
-        Stage stage = new Stage();
-        stage.setScene(scene);
+    }
 
-        stage.setTitle("Registration Form");
-
-        stage.show();
+    static UserDTO getLiveUserDto() {
+        return liveUserDto;
     }
 }

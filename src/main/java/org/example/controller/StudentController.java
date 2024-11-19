@@ -1,12 +1,17 @@
 package org.example.controller;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.bo.custom.impl.StudentBOImpl;
 import org.example.bo.custom.impl.UserBOImpl;
 import org.example.dto.StudentDTO;
@@ -14,6 +19,7 @@ import org.example.dto.UserDTO;
 import org.example.tm.StudentTm;
 import org.example.tm.UserTm;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class StudentController {
@@ -30,10 +36,47 @@ public class StudentController {
 
     public TextField txtName;
     public Label lblStudentId;
+    public JFXButton btnclear;
+    public JFXButton btndelete;
+    public JFXButton btnupdate;
+    public JFXButton btnsave;
     StudentBOImpl studentBO=new StudentBOImpl();
+    UserBOImpl userBO=new UserBOImpl();
+
+    static UserDTO liveUserDto;
     public void initialize() {
+        liveUserDto = LoginformController.getLiveUserDto();
         setCellValueFactory();
         loadAllStudents();
+        checkroll(liveUserDto);
+    }
+
+    /*public void setLiveUserDto(UserDTO userDto) {
+        liveUserDto = userDto;
+        if (liveUserDto == null) {
+            System.out.println("UserDTO is not initialized correctly.");
+        } else {
+            System.out.println("UserDTO initialized: " + liveUserDto.getU_name());
+            checkroll(); // Call checkroll after setting liveUserDto }
+        }
+    }*/
+     /*private void checkroll() {
+            if (liveUserDto != null && "user".equals(liveUserDto.getJob_role())) {
+                btnsave.setVisible(true);
+                btndelete.setVisible(false);
+                btnupdate.setVisible(true);
+                btnclear.setVisible(true); }
+     }*/
+
+
+    private void checkroll(UserDTO liveUserDto) {
+        if (liveUserDto.getJob_role().equals("user")) {
+            btnsave.setVisible(true);
+            btndelete.setVisible(false);
+            btnupdate.setVisible(true);
+            btnclear.setVisible(true);
+
+        }
     }
 
 
@@ -55,7 +98,12 @@ public class StudentController {
     public void idtextKeyReleased(KeyEvent keyEvent) {
     }
 
-    public void btnDashboardOnAction(ActionEvent event) {
+    public void btnDashboardOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
+        Stage stage = (Stage) root.getScene().getWindow();
+        stage.setScene(new Scene(anchorPane));
+        stage.setTitle("Dashboard Form");
+        stage.centerOnScreen();
     }
 
     public void btnClearOnAction(ActionEvent event) {
@@ -70,6 +118,7 @@ public class StudentController {
             boolean isDeleted = studentBO.delete(tel);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Deleted!").show();
+                loadAllStudents();
             } else {
                 new Alert(Alert.AlertType.WARNING, "No record found to delete!").show();
             }
@@ -77,21 +126,23 @@ public class StudentController {
             new Alert(Alert.AlertType.ERROR, "Try Again!").show();
             e.printStackTrace(); // Log the exception for debugging
         }
-
+        loadAllStudents();
         clearFields();
     }
 
     public void btnUpdateOnAction(ActionEvent event) {
-        long id = Long.parseLong(lblStudentId.getText());
+        
         String name = txtName.getText();
         String address = txtAddress.getText();
         String email = txtEmail.getText();
         String contact = txtContact.getText();
 
         try {
-            boolean isUpdated = studentBO.update(new StudentDTO(id, name, address, email, contact));
+            boolean isUpdated = studentBO.update(new StudentDTO( name, address, email, contact));
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated!").show();
+                loadAllStudents();  
+                clearFields();
             } else {
                 new Alert(Alert.AlertType.WARNING, "No record found to update!").show();
             }
@@ -99,8 +150,7 @@ public class StudentController {
             new Alert(Alert.AlertType.ERROR, "Try Again!").show();
             e.printStackTrace(); // Log the exception for debugging
         }
-
-        clearFields();
+        
 
     }
 
@@ -116,12 +166,23 @@ public class StudentController {
         System.out.println("Email: " + email);
         System.out.println("Contact: " + contact);
 
-        StudentDTO studentDTO = new StudentDTO(name, address, email, contact);
-        boolean isSaved = studentBO.save(studentDTO);
-        if (isSaved) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved!").show();
+        // Debugging userDTO
+        if (liveUserDto == null) {
+            System.out.println("userDTO is null!");
+        } else {
+            System.out.println("userDTO: " + liveUserDto);
         }
-        loadAllStudents();
+
+        // Check if liveUserDto is properly set
+        StudentDTO studentDTO = new StudentDTO(name, address, email, contact);
+        boolean isSaved = studentBO.save(studentDTO, liveUserDto);  // liveUserDto should not be null
+
+        if (isSaved) {
+            loadAllStudents();
+            new Alert(Alert.AlertType.CONFIRMATION, "Saved!").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Failed to save student!").show();
+        }
         clearFields();
     }
     private void setCellValueFactory() {
@@ -148,4 +209,19 @@ public class StudentController {
         txtContact.clear();
     }
 
+    public void updatestudent(MouseEvent mouseEvent) {
+        TableView<StudentTm> table = (TableView<StudentTm>) mouseEvent.getSource();
+        StudentTm student = table.getSelectionModel().getSelectedItem(); // Get the selected student
+        if (student != null) {  
+            String name = student.getS_name();
+            String address = student.getAddress();
+            String email = student.getEmail();
+            String contact = student.getTel();
+            
+            txtName.setText(name);
+            txtAddress.setText(address);
+            txtEmail.setText(email);
+            txtContact.setText(contact);
+        }
+    }
 }

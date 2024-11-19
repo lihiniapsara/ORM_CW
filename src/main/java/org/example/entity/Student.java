@@ -2,6 +2,8 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "student")
 public class Student {
@@ -19,9 +21,14 @@ public class Student {
     private   String contact;
 
     @ManyToOne
+    @JoinColumn(name = "u_id")
     private User user;
 
     public Student() {
+
+    }
+
+    public Student(String name, String address, String email, String contact) {
 
     }
 
@@ -39,6 +46,9 @@ public class Student {
         this.address = address;
         this.email = email;
         this.contact = contact;
+    }
+
+    public Student(long sId, String name, String address, String email, String contact, User user) {
     }
 
     public long getS_id() {
@@ -80,5 +90,16 @@ public class Student {
     public void setContact(String contact) {
         this.contact = contact;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Student_programDetail> studentProgramDetails;
 }
 

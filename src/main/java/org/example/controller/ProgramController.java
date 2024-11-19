@@ -3,6 +3,8 @@ package org.example.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -12,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import org.example.bo.BOFactory;
 import org.example.bo.custom.impl.ProgramBOImpl;
 import org.example.dto.ProgramDTO;
@@ -20,6 +23,7 @@ import org.example.dto.UserDTO;
 import org.example.tm.ProgramTm;
 import org.example.tm.StudentTm;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -156,9 +160,12 @@ public class ProgramController {
         // You can implement search functionality here if needed
     }
 
-    public void btnDashboardOnAction(ActionEvent event) {
-        // Navigate to the dashboard
-    }
+    public void btnDashboardOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
+        Stage stage = (Stage) root.getScene().getWindow();
+        stage.setScene(new Scene(anchorPane));
+        stage.setTitle("Dashboard Form");
+        stage.centerOnScreen();    }
 
     public void updateprogram(MouseEvent mouseEvent) {
         TableView<ProgramTm> table = (TableView<ProgramTm>) mouseEvent.getSource();

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootNode" prefHeight="367.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #dfe9f3, #ffffff); -fx-background-radius: 20; -fx-padding: 15;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.RegiController">
+    <children>
+        <!-- Title -->
+        <Label layoutX="140.0" layoutY="20.0" style="-fx-text-fill: #094067;" text="Register">
+            <font>
+                <Font name="Arial Bold Italic" size="20.0" />
+            </font>
+        </Label>
+
+        <!-- Username -->
+        <Label layoutX="40.0" layoutY="110.0" style="-fx-text-fill: #3d5a80;" text="Username:">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtUsername" layoutX="140.0" layoutY="105.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter Username" style="-fx-background-radius: 15; -fx-border-color: #3d5a80; -fx-border-radius: 15;" />
+
+        <!-- Email -->
+        <Label layoutX="40.0" layoutY="170.0" style="-fx-text-fill: #3d5a80;" text="Contact:">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txttel" layoutX="140.0" layoutY="165.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter Contact" style="-fx-background-radius: 15; -fx-border-color: #3d5a80; -fx-border-radius: 15;" />
+
+        <!-- Password -->
+        <Label layoutX="40.0" layoutY="230.0" style="-fx-text-fill: #3d5a80;" text="Password:">
+            <font>
+                <Font name="Arial Bold" size="14.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="txtPassword" layoutX="140.0" layoutY="225.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter Password" style="-fx-background-radius: 15; -fx-border-color: #3d5a80; -fx-border-radius: 15;" />
+
+        <!-- Register Button -->
+        <JFXButton buttonType="RAISED" layoutX="140.0" layoutY="300.0" onAction="#btnRegisterOnAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #3d5a80; -fx-background-radius: 20;" text="Register" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+
+        <!-- Back Button -->
+        <JFXButton buttonType="RAISED" layoutX="20.0" layoutY="20.0" onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #3d5a80; -fx-background-radius: 15;" text="Back" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+    </children>
+</AnchorPane>
