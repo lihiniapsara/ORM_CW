@@ -1,42 +1,34 @@
-package org.example.entity;
+package org.example.dto;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
-@Entity
-@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@NoArgsConstructor
+public class UserDto {
+
     private long id;
     private String username;
     private String email;
     private String password;
     private String role;
 
-    @OneToMany (mappedBy = "user")
-    private List<Student> student;
-
-    public User(String username, String email, String password, String role) {
+    public UserDto(String username, String email, String password, String admin) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.role = role;
+        this.role = admin;
     }
 
-    public User(long id, String username, String email, String password, String role) {
+    public UserDto(long id, String username, String email, String role) {
         this.id = id;
         this.username = username;
         this.email = email;
-        this.password = password;
         this.role = role;
     }
 }

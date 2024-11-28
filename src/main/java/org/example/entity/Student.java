@@ -1,105 +1,42 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+
 @Entity
-@Table(name = "student")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "s_id")
-    private   long s_id;
-    @Column(name = "s_name")
-    private   String s_name;
-    @Column(name = "address")
-    private   String address;
-    @Column(name = "email")
-    private   String email;
-    @Column(name = "contact")
-    private   String contact;
+    private String id;
+    private String name;
+    private String email;
+    private String tel;
+    private String address;
+    private String dob;
 
     @ManyToOne
-    @JoinColumn(name = "u_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
-    public Student() {
-
-    }
-
-    public Student(String name, String address, String email, String contact) {
-
-    }
-
-    public Student(String s_name, String address, String email, String contact, User user) {
-        this.s_name = s_name;
-        this.address = address;
+    public Student(String id, String name, String email, String tel, String address, String dob) {
+        this.id = id;
+        this.name = name;
         this.email = email;
-        this.contact = contact;
-        this.user = user;
-    }
-
-    public Student(long s_id, String s_name, String address, String email, String contact) {
-        this.s_id = s_id;
-        this.s_name = s_name;
+        this.tel = tel;
         this.address = address;
-        this.email = email;
-        this.contact = contact;
+        this.dob = dob;
     }
 
-    public Student(long sId, String name, String address, String email, String contact, User user) {
-    }
-
-    public long getS_id() {
-        return s_id;
-    }
-
-    public void setS_id(long s_id) {
-        this.s_id = s_id;
-    }
-
-    public String getS_name() {
-        return s_name;
-    }
-
-    public void setS_name(String s_name) {
-        this.s_name = s_name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+   @OneToMany(mappedBy = "student")
     private List<Student_programDetail> studentProgramDetails;
-}
 
+}

@@ -1,0 +1,98 @@
+/* Dark mode styling for the entire pane */
+.dark-mode-pane {
+    -fx-background-color: #1a1a1e;
+    -fx-padding: 20px;
+}
+
+/* Title Styling */
+.dashboard-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 40px;
+    -fx-text-fill: #ffffff;
+}
+
+/* Form input fields styling */
+.text-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00aaff;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Labels styling */
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Buttons styling */
+.dashboard-button {
+    -fx-background-color: #00aaff;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-font-family: "Arial";
+    -fx-pref-width: 150px;
+    -fx-padding: 10px;
+}
+.back-button {
+    -fx-background-color: #393a3a;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, #000000, 5, 0.0, 0, 1);
+}
+
+/* Hover effect for buttons */
+.dashboard-button:hover {
+    -fx-background-color: #005f8f;
+    -fx-cursor: hand;
+}
+
+/* Styling for payment history display */
+.payment-history {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00aaff;
+    -fx-padding: 5px;
+    -fx-pref-width: 400px;
+}
+
+
+.combo-box {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00aaff;
+    -fx-border-radius: 5px;
+    -fx-padding: 4px;
+    -fx-font-size: 16px;
+}
+
+/* ComboBox dropdown styling */
+.combo-box .list-cell {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 4px;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #00aaff;
+    -fx-text-fill: #ffffff;
+}
+
+/* ComboBox arrow button styling */
+.combo-box .arrow-button {
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #00aaff;
+    -fx-border-radius: 5px;
+}
+
+/* Focused ComboBox */
+.combo-box:focused {
+    -fx-border-color: #005f8f;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}

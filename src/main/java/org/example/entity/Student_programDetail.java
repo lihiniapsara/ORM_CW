@@ -17,14 +17,15 @@ import lombok.Setter;
 public class Student_programDetail {
 
     @Id
-    private String sp_id;
-    private String register_date;
+    private String spid;
+    private String registerDate;
+    private double regFee;
 
     @ManyToOne
-    @JoinColumn(name = "s_id")
+    @JoinColumn(name = "student_id")
     private Student student;
 
     @ManyToOne
     @JoinColumn(name = "program_id")
-    private Program program;
+    private Programme program;
 }
