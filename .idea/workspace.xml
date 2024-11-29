@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="119f54e3-8bfc-4e63-bc08-4e10a64bf4af" name="Changes" comment="Program Crud All done">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b51bcfe-eea1-4f4d-9311-6ae02ebb96be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b51bcfe-eea1-4f4d-9311-6ae02ebb96be.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/LoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/LoginForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/Programme.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Programme.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/RegistrationPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/RegistrationPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/Student.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Student.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/passwordChange.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/passwordChange.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/payment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/register_course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/register_course.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/userManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/userManagement.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/changePassword.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/changePassword.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/payment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/program_management.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/program_management.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/registercourse.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/registercourse.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/registration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/student_management.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/student_management.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/user_management.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/user_management.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Programme.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Programme.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/passwordChange.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/passwordChange.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/payment.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +159,7 @@
       <workItem from="1732789489314" duration="1747000" />
       <workItem from="1732815486812" duration="1407000" />
       <workItem from="1732858028145" duration="11818000" />
-      <workItem from="1732901458007" duration="914000" />
+      <workItem from="1732901458007" duration="4266000" />
     </task>
     <task id="LOCAL-00001" summary="Student Crud">
       <option name="closed" value="true" />
@@ -219,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731980247881</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Program Crud All done">
+      <option name="closed" value="true" />
+      <created>1732903125583</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732903125583</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

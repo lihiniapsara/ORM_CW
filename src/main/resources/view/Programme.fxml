@@ -13,26 +13,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="927.0" styleClass="dark-mode-pane" stylesheets="@view/program_management.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.contraller.ProgramManagementController">
+<AnchorPane prefHeight="700.0" prefWidth="927.0" style="-fx-background-color: #CB9DF0;" styleClass="dark-mode-pane" stylesheets="@view/program_management.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.contraller.ProgramManagementController">
     <children>
 
         <!-- Program Form -->
-        <GridPane alignment="TOP_LEFT" hgap="15" layoutX="105.0" layoutY="103.0" vgap="10">
+        <GridPane alignment="TOP_LEFT" hgap="15" layoutX="97.0" layoutY="156.0" vgap="10">
             <!-- Row 1 -->
             <Label text="Program ID:" />
             <TextField fx:id="txtProgramID" prefWidth="250.0" promptText="Enter Program ID" GridPane.columnIndex="1" />
 
-            <!-- Row 2 -->
-            <Label text="Program Name:" GridPane.rowIndex="1" />
-            <TextField fx:id="txtProgramName" prefWidth="250.0" promptText="Enter Program Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
             <!-- Row 3 -->
             <Label text="Duration:" GridPane.rowIndex="2" />
             <TextField fx:id="txtDuration" prefWidth="250.0" promptText="Enter Duration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-            <!-- Row 4 -->
-            <Label text="Fee (LKR):" GridPane.rowIndex="3" />
-            <TextField fx:id="txtFee" prefWidth="250.0" promptText="Enter Fee in LKR" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
             <columnConstraints>
                 <ColumnConstraints />
@@ -46,21 +38,15 @@
             </rowConstraints>
         </GridPane>
 
-        <!-- Buttons for Add, Update, Delete, Search -->
-        <HBox alignment="CENTER" layoutX="88.0" layoutY="374.0" spacing="20">
-            <Button fx:id="btnAddProgram" onAction="#addProgram" styleClass="dashboard-button" text="Add Program" />
-            <Button fx:id="btnUpdateProgram" onAction="#updateProgram" styleClass="dashboard-button" text="Update Program" />
-            <Button fx:id="btnDeleteProgram" onAction="#deleteProgram" styleClass="dashboard-button" text="Delete Program" />
-            <Button fx:id="btnSearchProgram" onAction="#searchProgram" styleClass="dashboard-button" text="Search Program" />
-        </HBox>
+
 
         <!-- Table for Program Records -->
-        <TableView fx:id="tblPrograms" layoutX="148.0" layoutY="459.0" onMouseClicked="#onClickedAction" prefHeight="200.0" prefWidth="602.0" styleClass="table-view">
+        <TableView fx:id="tblPrograms" layoutX="89.0" layoutY="322.0" onMouseClicked="#onClickedAction" prefHeight="261.0" prefWidth="760.0" styleClass="table-view">
             <columns>
                 <TableColumn fx:id="colProgramID" prefWidth="143.19996643066406" text="Program ID" />
-                <TableColumn fx:id="colProgramName" prefWidth="192.0" text="Program Name" />
-                <TableColumn fx:id="colDuration" prefWidth="164.79998779296875" text="Duration" />
-                <TableColumn fx:id="colFee" prefWidth="100.0" text="Fee (LKR)" />
+                <TableColumn fx:id="colProgramName" prefWidth="233.6000213623047" text="Program Name" />
+                <TableColumn fx:id="colDuration" prefWidth="188.79998779296875" text="Duration" />
+                <TableColumn fx:id="colFee" prefWidth="192.7999267578125" text="Fee (LKR)" />
             </columns>
         </TableView>
         <Text fill="WHITE" layoutX="297.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Program Management" wrappingWidth="395.1999267578125">
@@ -68,6 +54,20 @@
                 <Font name="System Bold Italic" size="37.0" />
             </font>
         </Text>
-      <Button fx:id="backbtn" layoutX="778.0" layoutY="43.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" styleClass="back-button" text="Back" />
+      <Button fx:id="backbtn" layoutX="778.0" layoutY="43.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" style="-fx-background-color: #8C3061;" styleClass="back-button" text="Back" />
+        <!-- Buttons for Add, Update, Delete, Search -->
+        <HBox alignment="CENTER" layoutX="353.0" layoutY="638.0" spacing="20">
+            <Button fx:id="btnAddProgram" onAction="#addProgram" style="-fx-background-color: #FC2947;" styleClass="dashboard-button" text="Add Program" />
+            <Button fx:id="btnUpdateProgram" onAction="#updateProgram" style="-fx-background-color: #FFD93D;" styleClass="dashboard-button" text="Update Program" />
+            <Button fx:id="btnDeleteProgram" onAction="#deleteProgram" style="-fx-background-color: #65B741;" styleClass="dashboard-button" text="Delete Program" />
+        </HBox>
+
+         <!-- Row 2 -->
+         <Label layoutX="495.0" layoutY="158.0" text="Program Name:" />
+         <TextField fx:id="txtProgramName" layoutX="629.0" layoutY="156.0" prefWidth="250.0" promptText="Enter Program Name" />
+
+         <!-- Row 4 -->
+         <Label layoutX="495.0" layoutY="211.0" text="Fee (LKR):" />
+         <TextField fx:id="txtFee" layoutX="629.0" layoutY="209.0" prefWidth="250.0" promptText="Enter Fee in LKR" />
     </children>
 </AnchorPane>
