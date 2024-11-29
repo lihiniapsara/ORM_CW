@@ -12,6 +12,9 @@ import java.io.IOException;
 
 public class DashboardController {
 
+    public Button btnPayment;
+    public Button btnRegistration1;
+    public Button backbtn;
     @FXML
     private Button btnCourseManagement;
 
@@ -33,7 +36,7 @@ public class DashboardController {
         Stage stage = (Stage) btnStudentManagement.getScene().getWindow();
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.setTitle("Registration Page");
+        stage.setTitle("Course Page");
     }
 
     @FXML
@@ -57,7 +60,7 @@ public class DashboardController {
         Stage stage = (Stage) btnStudentManagement.getScene().getWindow();
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.setTitle("Registration Page");
+        stage.setTitle("Student Page");
     }
 
     @FXML
@@ -69,10 +72,21 @@ public class DashboardController {
         Stage stage = (Stage) btnStudentManagement.getScene().getWindow();
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.setTitle("Registration Page");
+        stage.setTitle("User Page");
     }
 
     public void backOnAction(ActionEvent actionEvent) {
 
+    }
+
+    public void openPayment(ActionEvent event) throws IOException {
+        AnchorPane rootNode = FXMLLoader.load(getClass().getResource("/view/payment.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage stage = (Stage) btnStudentManagement.getScene().getWindow();
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setTitle("Payment Page");
     }
 }

@@ -78,7 +78,7 @@ public class PaymentController {
     }
 
     public void backOnAction(ActionEvent actionEvent) throws IOException {
-        AnchorPane rootNode = FXMLLoader.load(getClass().getResource("/view/register_course.fxml"));
+        AnchorPane rootNode = FXMLLoader.load(getClass().getResource("/view/dashboard.fxml"));
 
         Scene scene = new Scene(rootNode);
 
