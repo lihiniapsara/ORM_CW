@@ -14,34 +14,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="927.0" styleClass="dark-mode-pane" stylesheets="@view/student_management.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.contraller.StudentManagementController">
+<AnchorPane prefHeight="700.0" prefWidth="927.0" style="-fx-background-color: #CB9DF0;" styleClass="dark-mode-pane" stylesheets="@view/student_management.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.contraller.StudentManagementController">
     <children>
 
         <!-- Student Form (Using GridPane instead of VBox) -->
-        <GridPane alignment="TOP_LEFT" hgap="15" layoutX="65.0" layoutY="100.0" vgap="10">
+        <GridPane alignment="TOP_LEFT" hgap="15" layoutX="65.0" layoutY="152.0" vgap="10">
             <!-- Row 1 -->
             <Label text="ID:" />
             <TextField fx:id="txtStudentID" onKeyReleased="#stIdOnrelesedOnAction" prefWidth="250.0" promptText="Enter Student ID" GridPane.columnIndex="1" />
-   
-            <!-- Row 2 -->
-            <Label text="Name:" GridPane.rowIndex="1" />
-            <TextField fx:id="txtStudentName" onKeyReleased="#stNameOnActionReleased" prefWidth="250.0" promptText="Enter Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-   
+
             <!-- Row 3 -->
             <Label text="Email:" GridPane.rowIndex="2" />
             <TextField fx:id="txtStudentEmail" onKeyReleased="#stemailOnActionReleased" prefWidth="250.0" promptText="Enter Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-   
-            <!-- Row 4 -->
-            <Label text="DOB:" GridPane.rowIndex="3" />
-            <DatePicker fx:id="txtStudentDOB" prefWidth="250.0" promptText="Enter DOB" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-   
+
             <!-- Row 5 -->
             <Label text="Address:" GridPane.rowIndex="4" />
             <TextField fx:id="txtStudentAddress" onKeyReleased="#staddressOnActionReleased" prefWidth="250.0" promptText="Enter Address" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-   
-            <!-- Row 6 -->
-            <Label text="Tel:" GridPane.rowIndex="5" />
-            <TextField fx:id="txtStudentTel" onKeyReleased="#sttelOnActionReleased" prefWidth="250.0" promptText="Enter Telephone" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          <columnConstraints>
             <ColumnConstraints />
             <ColumnConstraints />
@@ -57,15 +45,10 @@
         </GridPane>
 
         <!-- Buttons for Add, Update, Delete, Search -->
-        <HBox alignment="CENTER" layoutX="65.0" layoutY="370.0" spacing="20">
-            <Button fx:id="btnAddStudent" onAction="#addStudent" styleClass="dashboard-button" text="Add Student" />
-            <Button fx:id="btnUpdateStudent" onAction="#updateStudent" styleClass="dashboard-button" text="Update Student" />
-            <Button fx:id="btnDeleteStudent" onAction="#deleteStudent" styleClass="dashboard-button" text="Delete Student" />
-            <Button fx:id="btnSearchStudent" onAction="#searchStudent" styleClass="dashboard-button" text="Search Student" />
-        </HBox>
+        <HBox alignment="CENTER" layoutX="65.0" layoutY="370.0" spacing="20" />
 
         <!-- Table for Student Records -->
-        <TableView fx:id="tblStudents" layoutX="64.0" layoutY="456.0" prefHeight="200.0" prefWidth="800.0" styleClass="table-view">
+        <TableView fx:id="tblStudents" layoutX="66.0" layoutY="352.0" prefHeight="200.0" prefWidth="800.0" styleClass="table-view">
             <columns>
                 <TableColumn fx:id="colID" prefWidth="100.0" text="ID" />
                 <TableColumn fx:id="colName" prefWidth="200.0" text="Name" />
@@ -80,6 +63,21 @@
             <Font name="System Bold Italic" size="37.0" />
          </font>
       </Text>
-      <Button fx:id="backbtn" layoutX="790.0" layoutY="30.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" styleClass="back-button" text="Back" />
+      <Button fx:id="backbtn" layoutX="790.0" layoutY="30.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" style="-fx-background-color: #8C3061;" styleClass="back-button" text="Back" />
+
+         <!-- Row 2 -->
+         <Label layoutX="517.0" layoutY="148.0" text="Name:" />
+         <TextField fx:id="txtStudentName" layoutX="597.0" layoutY="145.0" onKeyReleased="#stNameOnActionReleased" prefWidth="250.0" promptText="Enter Name" />
+         <DatePicker fx:id="txtStudentDOB" layoutX="599.0" layoutY="199.0" prefWidth="250.0" promptText="Enter DOB" />
+
+         <!-- Row 4 -->
+         <Label layoutX="517.0" layoutY="202.0" text="DOB:" />
+
+         <!-- Row 6 -->
+         <Label layoutX="524.0" layoutY="257.0" text="Tel:" />
+         <TextField fx:id="txtStudentTel" layoutX="597.0" layoutY="252.0" onKeyReleased="#sttelOnActionReleased" prefWidth="250.0" promptText="Enter Telephone" />
+         <Button fx:id="btnDeleteStudent" layoutX="750.0" layoutY="594.0" onAction="#deleteStudent" style="-fx-background-color: #FC2947;" styleClass="dashboard-button" text="Delete Student" />
+         <Button fx:id="btnUpdateStudent" layoutX="522.0" layoutY="594.0" onAction="#updateStudent" style="-fx-background-color: #FFD93D;" styleClass="dashboard-button" text="Update Student" />
+         <Button fx:id="btnAddStudent" layoutX="306.0" layoutY="594.0" onAction="#addStudent" style="-fx-background-color: #65B741;" styleClass="dashboard-button" text="Add Student" />
     </children>
 </AnchorPane>

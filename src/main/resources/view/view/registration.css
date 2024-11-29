@@ -1,5 +1,5 @@
 .dark-mode-pane {
-    -fx-background-color: #1a1a1e; /* Dark background for the pane */
+    -fx-background-color: #090909; /* Dark background for the pane */
 }
 
 .registration-title {
@@ -14,7 +14,7 @@
     -fx-padding: 10px; /* Padding inside the fields */
     -fx-background-color: #3a3a3e; /* Dark background for text fields */
     -fx-text-fill: #ffffff; /* White text in the fields */
-    -fx-border-color: #00aaff; /* Border color */
+    -fx-border-color: #81bedc; /* Border color */
     -fx-border-radius: 5px; /* Rounded borders */
 }
 

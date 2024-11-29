@@ -5,128 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="119f54e3-8bfc-4e63-bc08-4e10a64bf4af" name="Changes" comment="Program Crud All done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/BoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/SuperBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/Course_RegistrationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/PaymentBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/ProgramBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/StudentBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/UserBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/Course_Refistration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/PaymentBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/ProgramBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/StudentBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/UserBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/ChangePasswordContraller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/LoginFormContraller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/ProgramManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/RegisterCourseContraller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/StudentManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CrudDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/Course_registrationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/Course_RegistrationDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/PaymentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/ProgramDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/StudetDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/PaymentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/ProgramDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/StudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/PaymentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/ProgramDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/StudentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Student_programDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Programme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/LoginForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/Programme.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/RegistrationPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/Student.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/passwordChange.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/payment.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/userManagement.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/changePassword.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/payment.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/program_management.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/registercourse.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/registration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/student_management.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/view/view/user_management.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b51bcfe-eea1-4f4d-9311-6ae02ebb96be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b51bcfe-eea1-4f4d-9311-6ae02ebb96be.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/BOFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/SuperBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/UserBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/PaymentBOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/ProgramBOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/StudentBOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/impl/UserBOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/FactoryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/FactoryConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/DashboardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/LoginformController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/PaymentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ProgramController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/RegiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/RegisterProgramController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CrudDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/DAOFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/SuperDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/SuperDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/UserDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/PaymentDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/ProgramDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/StudentDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/impl/UserDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/PaymentDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/ProgramDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/StudentDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Student_programDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Student_programDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Student_programDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tm/PaymentTm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tm/ProgramTm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tm/RegisterProgramTm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tm/StudentTm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/tm/UserTm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/Style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/Delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/Payment-Transparent-Images.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/chef-logo-design-cooking-logo-template-bakery-vector-26493541.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/clean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/kindpng_2350682.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/logout-icon-android-29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/program-removebg-preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/register.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/save.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/student.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/update.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icon/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Dashboard.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Loginform.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Payment.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Program.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Register_Program.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/view/register_course.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Student.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/User.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reg.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/LoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/LoginForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/Programme.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Programme.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/RegistrationPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/RegistrationPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/Student.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Student.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/passwordChange.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/passwordChange.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/payment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/register_course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/register_course.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/userManagement.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/userManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/changePassword.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/changePassword.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/payment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/payment.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/program_management.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/program_management.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/registercourse.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/registercourse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/student_management.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/student_management.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/view/view/user_management.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/view/user_management.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,6 +175,9 @@
       <workItem from="1732758860000" duration="4746000" />
       <workItem from="1732782064947" duration="6248000" />
       <workItem from="1732789489314" duration="1747000" />
+      <workItem from="1732815486812" duration="1407000" />
+      <workItem from="1732858028145" duration="11818000" />
+      <workItem from="1732901458007" duration="914000" />
     </task>
     <task id="LOCAL-00001" summary="Student Crud">
       <option name="closed" value="true" />
@@ -335,11 +239,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/bo/BOFactory.java</url>
           <line>24</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Launcher.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/dto/StudentDTO.java</url>

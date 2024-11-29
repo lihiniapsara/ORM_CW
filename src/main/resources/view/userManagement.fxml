@@ -15,26 +15,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="927.0" styleClass="dark-mode-pane" stylesheets="@view/user_management.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.contraller.UserManagementController">
+<AnchorPane prefHeight="700.0" prefWidth="927.0" style="-fx-background-color: #CB9DF0;" styleClass="dark-mode-pane" stylesheets="@view/user_management.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.contraller.UserManagementController">
     <children>
 
         <!-- User Form (Using GridPane for layout) -->
-        <GridPane alignment="TOP_LEFT" hgap="15" layoutX="65.0" layoutY="100.0" vgap="10">
+        <GridPane alignment="TOP_LEFT" hgap="15" layoutX="64.0" layoutY="184.0" vgap="10">
             <!-- Row 1 -->
             <Label text="User ID:" />
             <TextField fx:id="txtUserID" prefWidth="250.0" promptText="Enter User ID" GridPane.columnIndex="1" />
 
-            <!-- Row 2 -->
-            <Label text="Username:" GridPane.rowIndex="1" />
-            <TextField fx:id="txtUsername" prefWidth="250.0" promptText="Enter Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
             <!-- Row 3 -->
             <Label text="Email:" GridPane.rowIndex="2" />
             <TextField fx:id="txtEmail" prefWidth="250.0" promptText="Enter Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-            <!-- Row 4 -->
-            <Label text="Role:" GridPane.rowIndex="3" />
-         <ComboBox fx:id="roleCmb" prefHeight="26.0" prefWidth="249.0" styleClass="combobox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
             <columnConstraints>
                 <ColumnConstraints />
@@ -50,15 +42,10 @@
         </GridPane>
 
         <!-- Buttons for Add, Update, Delete, Search -->
-        <HBox alignment="CENTER" layoutX="65.0" layoutY="370.0" spacing="20">
-            <Button fx:id="btnAddUser" onAction="#addUser" styleClass="dashboard-button" text="Add User" />
-            <Button fx:id="btnUpdateUser" onAction="#updateUser" styleClass="dashboard-button" text="Update User" />
-            <Button fx:id="btnDeleteUser" onAction="#deleteUser" styleClass="dashboard-button" text="Delete User" />
-            <Button fx:id="btnSearchUser" onAction="#searchUser" styleClass="dashboard-button" text="Search User" />
-        </HBox>
+        <HBox alignment="CENTER" layoutX="65.0" layoutY="370.0" spacing="20" />
 
         <!-- Table for User Records -->
-        <TableView fx:id="tblUsers" layoutX="64.0" layoutY="456.0" onMouseClicked="#userTblClicked" prefHeight="200.0" prefWidth="653.0" styleClass="table-view">
+        <TableView fx:id="tblUsers" layoutX="143.0" layoutY="401.0" onMouseClicked="#userTblClicked" prefHeight="200.0" prefWidth="653.0" styleClass="table-view">
             <columns>
                 <TableColumn fx:id="colUserID" prefWidth="100.0" text="User ID" />
                 <TableColumn fx:id="colUsername" prefWidth="200.0" text="Username" />
@@ -71,7 +58,23 @@
                 <Font name="System Bold Italic" size="37.0" />
             </font>
         </Text>
-      <Button fx:id="backbtn" layoutX="760.0" layoutY="43.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" styleClass="back-button" text="Back" />
-      <Hyperlink layoutX="162.0" layoutY="276.0" onAction="#passwordChangeOnAction" prefHeight="24.0" prefWidth="150.0" text="Change Password !!" />
+      <Button fx:id="backbtn" layoutX="760.0" layoutY="43.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" style="-fx-background-color: #8C3061;" styleClass="back-button" text="Back" />
+      <Hyperlink layoutX="139.0" layoutY="325.0" onAction="#passwordChangeOnAction" prefHeight="24.0" prefWidth="150.0" text="Change Password ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Hyperlink>
+         <Button fx:id="btnDeleteUser" layoutX="749.0" layoutY="632.0" onAction="#deleteUser" style="-fx-background-color: #FC2947;" styleClass="dashboard-button" text="Delete User" />
+         <Button fx:id="btnUpdateUser" layoutX="525.0" layoutY="632.0" onAction="#updateUser" style="-fx-background-color: #FFD93D;" styleClass="dashboard-button" text="Update User" />
+         <Button fx:id="btnAddUser" layoutX="297.0" layoutY="632.0" onAction="#addUser" style="-fx-background-color: #65B741;" styleClass="dashboard-button" text="Add User" />
+
+         <!-- Row 2 -->
+         <Label layoutX="511.0" layoutY="187.0" text="Username:" />
+         <TextField fx:id="txtUsername" layoutX="606.0" layoutY="185.0" prefWidth="250.0" promptText="Enter Username" />
+
+         <!-- Row 4 -->
+         <Label layoutX="511.0" layoutY="250.0" text="Role:" />
+      <ComboBox fx:id="roleCmb" layoutX="606.0" layoutY="241.0" prefHeight="26.0" prefWidth="249.0" styleClass="combobox" />
+      <TextField fx:id="txtpw" layoutX="139.0" layoutY="281.0" prefWidth="250.0" promptText="Enter Password" />
+      <Label layoutX="65.0" layoutY="283.0" text="Pw:" />
     </children>
 </AnchorPane>

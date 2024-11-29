@@ -20,6 +20,8 @@ import java.util.List;
 
 public class UserManagementController {
     public ComboBox roleCmb;
+    public Button backbtn;
+    public TextField txtpw;
     UserBo userBo = (UserBo) BoFactory.getBoFactory().getBO(BoFactory.BOTypes.USER);
 
     @FXML
@@ -91,7 +93,7 @@ public class UserManagementController {
         String id = txtUserID.getText();
         String username = txtUsername.getText();
         String email = txtEmail.getText();
-        String password = txtPassword.getText();
+        String password = txtpw.getText();
         String role = (String) roleCmb.getValue();
 
         if (id.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || role.isEmpty()) {
@@ -135,7 +137,7 @@ public class UserManagementController {
         int id = Integer.parseInt(txtUserID.getText());
         String username = txtUsername.getText();
         String email = txtEmail.getText();
-        String password = txtPassword.getText();
+        String password = txtpw.getText();
         String role = (String) roleCmb.getValue();
 
         if ( id == 0 || username.isEmpty() || email.isEmpty() || password.isEmpty() || role.isEmpty()) {
@@ -183,6 +185,5 @@ public class UserManagementController {
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.setTitle("Registration Page");
-
     }
 }
