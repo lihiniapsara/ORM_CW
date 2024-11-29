@@ -88,8 +88,8 @@
         <TextField fx:id="txtAmountPaid" layoutX="187.0" layoutY="451.0" promptText="Amount Paid" styleClass="text-field" />
 
         <!-- Action Buttons -->
-        <Button fx:id="btnRegister" layoutX="434.0" layoutY="387.0" mnemonicParsing="false" onAction="#registerOnAction" styleClass="button" text="Register" />
-        <Button fx:id="btnDelete" layoutX="601.0" layoutY="387.0" mnemonicParsing="false" onAction="#DeleteOnAction" styleClass="button" text="Delete" />
+        <Button fx:id="btnRegister" layoutX="434.0" layoutY="387.0" mnemonicParsing="false" onAction="#registerOnAction" style="-fx-background-color: #65B741;" styleClass="button" text="Register" />
+        <Button fx:id="btnDelete" layoutX="601.0" layoutY="387.0" mnemonicParsing="false" onAction="#DeleteOnAction" style="-fx-background-color: #FC2947;" styleClass="button" text="Delete" />
         <Button fx:id="btnSearch" layoutX="771.0" layoutY="388.0" mnemonicParsing="false" onAction="#SearchOnAction" styleClass="button" text="Search" />
 
         <!-- Table for Displaying Registered Courses -->
@@ -102,7 +102,7 @@
                 <TableColumn fx:id="colFee" prefWidth="124.7999267578125" text="Fee (LKR)" />
             </columns>
         </TableView>
-      <Button fx:id="backbtn" layoutX="817.0" layoutY="22.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" styleClass="back-button" text="Back" />
-      <Button fx:id="btnrefill" layoutX="855.0" layoutY="635.0" mnemonicParsing="false" onAction="#refillOnAction" styleClass="button" text="Refill" />
+      <Button fx:id="backbtn" layoutX="817.0" layoutY="22.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" style="-fx-background-color: #8C3061;" styleClass="back-button" text="Back" />
+      <Button fx:id="btnrefill" layoutX="855.0" layoutY="635.0" mnemonicParsing="false" onAction="#refillOnAction" style="-fx-background-color: #FFD93D;" styleClass="button" text="Refill" />
     </children>
 </AnchorPane>
