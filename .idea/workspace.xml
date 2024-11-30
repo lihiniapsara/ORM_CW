@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="119f54e3-8bfc-4e63-bc08-4e10a64bf4af" name="Changes" comment=" All done">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b51bcfe-eea1-4f4d-9311-6ae02ebb96be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b51bcfe-eea1-4f4d-9311-6ae02ebb96be.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/UserBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bo/custom/BoIMPL/UserBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/ChangePasswordContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/ChangePasswordContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/ProgramManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/ProgramManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/StudentManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/StudentManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/contraller/UserManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/custom/IMPL/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Programme.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Programme.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Student.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Student.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/passwordChange.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/passwordChange.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +168,7 @@
       <workItem from="1732789489314" duration="1747000" />
       <workItem from="1732815486812" duration="1407000" />
       <workItem from="1732858028145" duration="11818000" />
-      <workItem from="1732901458007" duration="5917000" />
+      <workItem from="1732901458007" duration="9370000" />
     </task>
     <task id="LOCAL-00001" summary="Student Crud">
       <option name="closed" value="true" />
@@ -229,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732909344162</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=" All done">
+      <option name="closed" value="true" />
+      <created>1732909854604</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732909854604</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +276,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/dto/StudentDTO.java</url>
           <line>19</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/contraller/ChangePasswordContraller.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

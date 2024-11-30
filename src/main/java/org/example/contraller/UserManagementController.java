@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import org.example.bo.BoFactory;
 import org.example.bo.custom.UserBo;
 import org.example.dto.UserDto;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import java.io.IOException;
 import java.util.List;
@@ -99,15 +100,18 @@ public class UserManagementController {
         if (id.isEmpty() || username.isEmpty() || email.isEmpty() || password.isEmpty() || role.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please fill all the fields").show();
         } else {
-            UserDto userDto = new UserDto(username, email, password, role);
+            String bycryptedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+            UserDto userDto = new UserDto(username, email, bycryptedPassword, role);
             boolean issaved = userBo.save(userDto);
             if (issaved) {
+                loadAllUsers();
                 new Alert(Alert.AlertType.CONFIRMATION, "User Saved").show();
 
             } else {
                 new Alert(Alert.AlertType.ERROR, "User Not Saved").show();
             }
         }
+        clearfields();
     }
 
     @FXML
@@ -125,6 +129,7 @@ public class UserManagementController {
             }
 
         }
+        clearfields();
     }
 
     @FXML
@@ -152,6 +157,7 @@ public class UserManagementController {
                 new Alert(Alert.AlertType.ERROR, "User Not Updated").show();
             }
         }
+        clearfields();
     }
 
     public void userTblClicked(MouseEvent mouseEvent) {
@@ -161,6 +167,7 @@ public class UserManagementController {
             txtUserID.setText(String.valueOf(userDto.getId()));
             txtUsername.setText(userDto.getUsername());
             txtEmail.setText(userDto.getEmail());
+            txtpw.setText(userDto.getPassword());
             roleCmb.setValue(userDto.getRole());
         }
     }
@@ -185,5 +192,13 @@ public class UserManagementController {
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.setTitle("Registration Page");
+    }
+
+    public void clearfields(){
+        txtUserID.setText("");
+        txtUsername.setText("");
+        txtEmail.setText("");
+        txtpw.setText("");
+        roleCmb.setValue("");
     }
 }

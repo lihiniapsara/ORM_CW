@@ -64,6 +64,12 @@ public class ProgramManagementController {
         setcellvaluefactory();
         getallProgram();
     }
+    private void clearFields() {
+        txtProgramID.clear();
+        txtProgramName.clear();
+        txtDuration.clear();
+        txtFee.clear();
+    }
 
     private void setcellvaluefactory() {
         colProgramID.setCellValueFactory(new PropertyValueFactory<>("programId"));
@@ -99,7 +105,7 @@ public class ProgramManagementController {
                 new Alert(Alert.AlertType.CONFIRMATION, "Add Successful").show();
             }
         }
-
+    clearFields();
     }
 
     @FXML
@@ -115,6 +121,7 @@ public class ProgramManagementController {
                 new Alert(Alert.AlertType.CONFIRMATION, "Delete Successful").show();
             }
         }
+        clearFields();
     }
 
     @FXML
@@ -152,7 +159,7 @@ public class ProgramManagementController {
                 new Alert(Alert.AlertType.CONFIRMATION, "Update Successful").show();
             }
         }
-
+    clearFields();
     }
 
     public void onClickedAction(javafx.scene.input.MouseEvent mouseEvent) {

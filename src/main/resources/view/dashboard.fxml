@@ -10,11 +10,10 @@
         <Label layoutX="364.0" layoutY="20.0" prefHeight="58.0" prefWidth="232.0" styleClass="dashboard-title" text="Dashboard" />
 
         <VBox layoutX="100.0" layoutY="100.0" spacing="20" />
-         <Button fx:id="btnPayment" layoutX="582.0" layoutY="359.0" onAction="#openPayment" prefHeight="144.0" style="-fx-background-color: #B3A492;" styleClass="dashboard-button" text="Payment" />
          <Button fx:id="btnUserManagement" layoutX="59.0" layoutY="365.0" onAction="#openUserManagement" prefHeight="144.0" style="-fx-background-color: #FFE3E3;" styleClass="dashboard-button" text="User Management" />
          <Button fx:id="btnCourseManagement" layoutX="582.0" layoutY="160.0" onAction="#openCourseManagement" prefHeight="144.0" style="-fx-background-color: #FFD09B;" styleClass="dashboard-button" text="Course Management" />
          <Button fx:id="btnStudentManagement" layoutX="59.0" layoutY="160.0" onAction="#openStudentManagement" prefHeight="144.0" style="-fx-background-color: #D1E9F6;" styleClass="dashboard-button" text="Student Management" />
       <Button fx:id="backbtn" layoutX="770.0" layoutY="53.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="19.0" prefWidth="111.0" styleClass="back-button" text="Log Out" />
-      <Button fx:id="btnRegistration1" layoutX="324.0" layoutY="543.0" onAction="#openRegistration" prefHeight="144.0" style="-fx-background-color: #86AB89;" styleClass="dashboard-button" text="Registration" />
+      <Button fx:id="btnRegistration1" layoutX="582.0" layoutY="365.0" onAction="#openRegistration" prefHeight="144.0" style="-fx-background-color: #86AB89;" styleClass="dashboard-button" text="Registration" />
     </children>
 </AnchorPane>

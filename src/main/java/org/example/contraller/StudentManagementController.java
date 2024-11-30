@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.BoFactory;
@@ -86,6 +87,15 @@ public class StudentManagementController {
         checkrolll(liveUser);
     }
 
+    private void clearFields() {
+        txtStudentID.clear();
+        txtStudentName.clear();
+        txtStudentEmail.clear();
+        txtStudentTel.clear();
+        txtStudentAddress.clear();
+        txtStudentDOB.getEditor().clear();
+    }
+
     private void checkrolll(UserDto liveUser) {
         if (liveUser.getRole().equals("user")){
             btnAddStudent.setVisible(true);
@@ -134,7 +144,7 @@ public class StudentManagementController {
 
         }
 
-
+    clearFields();
     }
 
     @FXML
@@ -154,7 +164,7 @@ public class StudentManagementController {
             new Alert(Alert.AlertType.ERROR, "Please fill all the fields").show();
         }
 
-
+    clearFields();
     }
 
     @FXML
@@ -204,7 +214,7 @@ public class StudentManagementController {
             new Alert(Alert.AlertType.ERROR, "Invalid Data").show();
         }
 
-
+    clearFields();
     }
 
     public boolean isavalid(){
@@ -272,6 +282,19 @@ public class StudentManagementController {
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.setTitle("Login Page");
+    }
+
+    public void tableclicked(MouseEvent mouseEvent) {
+        StudentDto studentDto = tblStudents.getSelectionModel().getSelectedItem();
+        if (studentDto != null) {
+            txtStudentID.setText(String.valueOf(studentDto.getId()));
+            txtStudentName.setText(studentDto.getName());
+            txtStudentEmail.setText(studentDto.getEmail());
+            txtStudentTel.setText(studentDto.getTel());
+            txtStudentAddress.setText(studentDto.getAddress());
+            txtStudentDOB.setValue(LocalDate.parse(studentDto.getDob()));
+        }
+
     }
 }
 

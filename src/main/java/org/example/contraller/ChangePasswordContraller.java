@@ -54,6 +54,7 @@ public class ChangePasswordContraller {
 
     @FXML
     void clearFields(ActionEvent event) {
+        txtUsername.clear();
         txtNewPassword.clear();
         txtConfirmPassword.clear();
 

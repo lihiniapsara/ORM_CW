@@ -97,7 +97,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public boolean save(User user) {
         Session session = FactoryConfiguration.getInstance().getSession();
-        session.getTransaction();
+        session.beginTransaction();
         session.save(user);
         session.getTransaction().commit();
         return true;
